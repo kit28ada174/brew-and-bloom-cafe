@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Brew & Bloom | Premium Café</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span>☕</span>
+            Brew & Bloom
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+            <a href="#offer">Offer</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+
+    <div class="cart">
+        🛒 <span id="cart-count">0</span>
+    </div>
+
+    <button class="theme-btn" onclick="toggleTheme()">
+        ☾
+    </button>
+
+</div>
+
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">WELCOME TO BREW & BLOOM</p>
+
+            <h1>
+                Where Every
+                <span>Sip</span>
+                Tells a Story.
+            </h1>
+
+            <p class="hero-text">
+                Freshly brewed coffee, handcrafted with passion,
+                served in a space made for beautiful moments.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#menu" class="primary-btn">
+                    Explore Menu →
+                </a>
+
+                <a href="#about" class="secondary-btn">
+                    Discover Us
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+
+            <div class="coffee-circle">
+                ☕
+            </div>
+
+            <div class="floating-card">
+                ⭐ 4.9 Rating
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= STATS ================= -->
+
+    <section class="stats">
+
+        <div>
+            <h2>8+</h2>
+            <p>Years of Passion</p>
+        </div>
+
+        <div>
+            <h2>25K+</h2>
+            <p>Happy Customers</p>
+        </div>
+
+        <div>
+            <h2>20+</h2>
+            <p>Signature Drinks</p>
+        </div>
+
+        <div>
+            <h2>4.9</h2>
+            <p>Customer Rating</p>
+        </div>
+
+    </section>
+
+    <section id="menu" class="menu-section">
+
+    <div class="section-heading">
+
+        <p class="small-title">OUR SPECIALS</p>
+
+        <h2>
+            Crafted With
+            <span>Love</span>
+        </h2>
+
+        <p>
+            Discover our carefully selected drinks and treats,
+            made fresh every day.
+        </p>
+
+    </div>
+
+
+    <!-- MENU FILTER -->
+
+    <div class="menu-filter">
+
+        <button class="filter-btn active" onclick="filterMenu('all')">
+            All
+        </button>
+
+        <button class="filter-btn" onclick="filterMenu('coffee')">
+            Coffee
+        </button>
+
+        <button class="filter-btn" onclick="filterMenu('dessert')">
+            Desserts
+        </button>
+
+        <button class="filter-btn" onclick="filterMenu('snack')">
+            Snacks
+        </button>
+
+    </div>
+
+
+    <div class="menu-container">
+
+    <!-- CARD 1 -->
+    <div class="menu-card" data-category="coffee">
+
+        <div class="food-image coffee">
+            ☕
+        </div>
+
+        <div class="card-content">
+
+            <div class="card-title">
+                <h3>Cappuccino</h3>
+                <span>₹180</span>
+            </div>
+
+            <p>
+                Rich espresso combined with steamed milk
+                and creamy foam.
+            </p>
+
+            <button onclick="orderItem('Cappuccino')">
+                Order Now →
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- CARD 2 -->
+    <div class="menu-card" data-category="coffee">
+
+        <div class="food-image latte">
+            🧋
+        </div>
+
+        <div class="card-content">
+
+            <div class="card-title">
+                <h3>Iced Latte</h3>
+                <span>₹200</span>
+            </div>
+
+            <p>
+                Smooth espresso, chilled milk and ice
+                for a refreshing experience.
+            </p>
+
+            <button onclick="orderItem('Iced Latte')">
+                Order Now →
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- CARD 3 -->
+    <div class="menu-card" data-category="dessert">
+
+        <div class="food-image cake">
+            🍰
+        </div>
+
+        <div class="card-content">
+
+            <div class="card-title">
+                <h3>Chocolate Cake</h3>
+                <span>₹160</span>
+            </div>
+
+            <p>
+                Soft chocolate cake layered with
+                delicious creamy frosting.
+            </p>
+
+            <button onclick="orderItem('Chocolate Cake')">
+                Order Now →
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- CARD 4 -->
+    <div class="menu-card" data-category="snack">
+
+        <div class="food-image croissant">
+            🥐
+        </div>
+
+        <div class="card-content">
+
+            <div class="card-title">
+                <h3>Butter Croissant</h3>
+                <span>₹140</span>
+            </div>
+
+            <p>
+                Golden, crispy and buttery pastry
+                baked fresh every morning.
+            </p>
+
+            <button onclick="orderItem('Butter Croissant')">
+                Order Now →
+            </button>
+
+        </div>
+
+    </div>
+
+</div> <!-- menu-container -->
+
+</section> <!-- menu-section -->
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="about-section">
+        <div class="about-image">
+            <div class="about-circle">
+                ☕
+            </div>
+        </div>
+
+
+        <div class="about-content">
+
+            <p class="small-title">
+                OUR STORY
+            </p>
+
+            <h2>
+                More Than Just
+                <span>Coffee.</span>
+            </h2>
+
+            <p>
+                Brew & Bloom was created with one simple idea:
+                coffee should bring people together.
+            </p>
+
+            <p>
+                From our carefully selected beans to our freshly
+                baked treats, every detail is created to make
+                your visit memorable.
+            </p>
+
+            <div class="about-points">
+
+                <div>
+                    ✓ Freshly Roasted Beans
+                </div>
+
+                <div>
+                    ✓ Handcrafted Drinks
+                </div>
+
+                <div>
+                    ✓ Cozy Atmosphere
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= OFFER ================= -->
+
+    <section id="offer" class="offer-section">
+
+        <div class="offer-content">
+
+            <p class="small-title">
+                SPECIAL OFFER
+            </p>
+
+            <h2>
+                Morning Brew
+                <span>20% OFF</span>
+            </h2>
+
+            <p>
+                Start your morning with your favourite coffee
+                and enjoy 20% off before 11 AM.
+            </p>
+
+            <button onclick="claimOffer()" class="primary-btn">
+                Claim Offer
+            </button>
+
+        </div>
+
+        <div class="offer-icon">
+            ☕
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+        GALLERY
+    ========================= -->
+
+    <section class="gallery-section">
+
+        <div class="section-heading">
+
+            <p class="small-title">
+                OUR SPACE
+            </p>
+
+            <h2>
+                A Place To <span>Unwind</span>
+            </h2>
+
+        </div>
+
+
+        <div class="gallery">
+
+            <div class="gallery-item large">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
+                    alt="Coffee">
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb"
+                    alt="Cafe">
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1511081692775-05d0f180a065"
+                    alt="Coffee shop">
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13"
+                    alt="Coffee cup">
+            </div>
+
+        </div>
+
+    </section>
+    
+    <!-- =========================
+        TESTIMONIALS
+    ========================= -->
+
+    <section class="testimonial-section">
+
+        <div class="section-heading">
+
+            <p class="small-title">
+                CUSTOMER LOVE
+            </p>
+
+            <h2>
+                What People <span>Say</span>
+            </h2>
+
+        </div>
+
+
+        <div class="testimonial-container">
+
+            <div class="testimonial-card">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "The coffee is amazing and the atmosphere
+                    is even better. My favourite place to relax!"
+                </p>
+
+                <h3>— Ananya</h3>
+
+            </div>
+
+
+            <div class="testimonial-card">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "Beautiful ambience, friendly staff and
+                    delicious desserts. Highly recommended!"
+                </p>
+
+                <h3>— Rahul</h3>
+
+            </div>
+
+
+            <div class="testimonial-card">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "Brew & Bloom has become my weekend
+                    coffee destination. Absolutely love it!"
+                </p>
+
+                <h3>— Meera</h3>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="contact-section">
+
+        <div class="section-heading">
+
+            <p class="small-title">
+                COME SAY HELLO
+            </p>
+
+            <h2>
+                Visit <span>Us</span>
+            </h2>
+
+        </div>
+
+
+        <div class="contact-container">
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    📍
+                </div>
+
+                <h3>Location</h3>
+
+                <p>
+                    123 Coffee Street<br>
+                    Coimbatore, Tamil Nadu
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    📞
+                </div>
+
+                <h3>Phone</h3>
+
+                <p>
+                    +91 98765 43210
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    ✉️
+                </div>
+
+                <h3>Email</h3>
+
+                <p>
+                    hello@brewandbloom.com
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            ☕ Brew & Bloom
+        </div>
+
+        <p>
+            Crafted with passion. Served with warmth.
+        </p>
+
+        <p class="copyright">
+            © 2026 Brew & Bloom. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
